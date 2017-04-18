@@ -8,4 +8,9 @@ describe Account do
   it "#deposit adds to account balance" do
     expect{account.deposit(200)}.to change{account.balance}.by(200)
   end
+
+  it "#withdraw subtracts from account balance" do
+    account.deposit(200)
+    expect{account.withdraw(100)}.to change{account.balance}.by(-100)
+  end
 end
