@@ -13,4 +13,9 @@ describe Account do
     account.deposit(200)
     expect{account.withdraw(100)}.to change{account.balance}.by(-100)
   end
+
+  it "cannot withdraw more than account balance" do
+    account.deposit(10)
+    expect{account.withdraw(50)}.to raise_error("Insufficient funds")
+  end
 end

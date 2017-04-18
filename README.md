@@ -14,4 +14,10 @@ I want to withdraw an amount of money.
 As an account-holder,  
 So I have visibility over my bank account status and history,  
 I want to see my account statement with date, credit/debit and running balance.  
+
+
+As a bank manager,  
+So we do not unknowingly lend money,  
+I want a user to not be able withdraw more than is in their account.  
+
 ```
