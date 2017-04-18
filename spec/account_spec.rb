@@ -1,7 +1,11 @@
 describe Account do
-  let(:account) { described_class.new }
+  subject(:account) { described_class.new }
 
-  it "has starting balance of 0" do
+  it "has a starting balance of 0" do
     expect(account.balance).to eq(0)
+  end
+
+  it "#deposit adds to account balance" do
+    expect{account.deposit(200)}.to change{account.balance}.by(200)
   end
 end
