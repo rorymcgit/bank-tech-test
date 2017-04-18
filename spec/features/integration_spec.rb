@@ -29,7 +29,6 @@ describe "Integration" do
         expect(account.log.history[1]).to eq([@date, -50, 150])
       end
     end
-
   end
 
 end

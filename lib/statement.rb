@@ -6,7 +6,7 @@ class Statement
       arr.each do |item|
         print item, "\t\t"
       end
-      puts
+      print "\n"
     end
   end
 
