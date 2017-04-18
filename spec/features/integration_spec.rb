@@ -25,11 +25,10 @@ describe "Integration" do
 
     context "withdraw" do
       it "stores withdrawal data", :feat do
-        account.withdraw(100)
-        expect(account.log.history[1]).to eq([@date, -100, 100])
+        account.withdraw(50)
+        expect(account.log.history[1]).to eq([@date, -50, 150])
       end
     end
-
 
   end
 

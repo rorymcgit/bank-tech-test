@@ -1,3 +1,5 @@
+require_relative 'log'
+
 class Account
 
   attr_reader :balance, :log
@@ -21,7 +23,7 @@ class Account
 
   private
   def check_withdrawal_does_not_exceed_balance(amount)
-    raise "Insufficient funds" if amount > balance
+    raise "Insufficient funds available" if amount > balance
   end
 
 end
