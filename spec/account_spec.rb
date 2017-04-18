@@ -26,5 +26,4 @@ describe Account do
     end
   end
 
-
 end

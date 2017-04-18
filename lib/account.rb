@@ -1,4 +1,5 @@
 require_relative 'log'
+require_relative 'statement'
 
 class Account
 
@@ -18,6 +19,10 @@ class Account
     check_withdrawal_does_not_exceed_balance(amount)
     @balance -= amount
     log.store(Time.now, -amount, balance)
+  end
+
+  def view_statement(statement = Statement.new)
+    statement.view(@log)
   end
 
 

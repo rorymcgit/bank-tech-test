@@ -1,5 +1,6 @@
 require_relative '../lib/account'
 require_relative '../lib/log'
+require_relative '../lib/statement'
 require 'date'
 require 'timecop'
 
