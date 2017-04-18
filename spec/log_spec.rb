@@ -8,10 +8,15 @@ describe Log do
 
   describe "storing data" do
     before(:each) do
-      @date = Time.new
+      @date = Time.now
+      Timecop.freeze(@date)
       allow(account).to receive(:balance) { 300 }
       log.store(@date, 200, account.balance)
       @first_log_entry = log.history[0]
+    end
+
+    after do
+      Timecop.return
     end
 
     it "stores the date" do

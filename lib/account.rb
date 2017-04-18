@@ -1,6 +1,6 @@
 class Account
 
-  attr_reader :balance
+  attr_reader :balance, :log
 
   def initialize(log = Log.new)
     @balance = 0
@@ -9,11 +9,13 @@ class Account
 
   def deposit(amount)
     @balance += amount
+    log.store(Time.now, amount, balance)
   end
 
   def withdraw(amount)
     check_withdrawal_does_not_exceed_balance(amount)
     @balance -= amount
+    log.store(Time.now, -amount, balance)
   end
 
 
