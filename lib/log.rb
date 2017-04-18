@@ -8,8 +8,8 @@ class Log
     @history = []
   end
 
-  def store_date(date)
-    @history << date
+  def store(date, amount, current_balance)
+    @history << [date, amount, current_balance]
   end
 
 end

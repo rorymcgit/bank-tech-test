@@ -2,8 +2,9 @@ class Account
 
   attr_reader :balance
 
-  def initialize
+  def initialize(log = Log.new)
     @balance = 0
+    @log = log
   end
 
   def deposit(amount)
