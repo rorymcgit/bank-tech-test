@@ -7,7 +7,7 @@ describe Log do
   end
 
   describe "storing data" do
-    before(:each) do
+    before do
       @date = Time.now
       Timecop.freeze(@date)
       allow(account).to receive(:balance) { 300 }

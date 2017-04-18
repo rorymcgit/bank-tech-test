@@ -25,7 +25,6 @@ class Account
     statement.view(@log)
   end
 
-
   private
   def check_withdrawal_does_not_exceed_balance(amount)
     raise "Insufficient funds available" if amount > balance

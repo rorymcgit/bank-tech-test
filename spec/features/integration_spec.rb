@@ -11,7 +11,7 @@ describe "Integration" do
   end
 
   describe "storing data" do
-    before(:each) do
+    before do
       @date = Time.now
       Timecop.freeze(@date)
       account.deposit(200)
