@@ -17,7 +17,7 @@ I want to see my account statement with date, credit/debit and running balance.
 
 
 As a bank manager,  
-So we do not unknowingly lend money,  
-I want a user to not be able withdraw more than is in their account.  
+So the bank can make money,  
+I want to charge people if they go overdrawn.  
 
 ```

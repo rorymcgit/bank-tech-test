@@ -20,10 +20,17 @@ describe Account do
       expect{account.withdraw(100)}.to change{account.balance}.by(-100)
     end
 
-    it "cannot withdraw more than account balance" do
-      account.deposit(10)
-      expect{account.withdraw(50)}.to raise_error("Insufficient funds available")
+    context "withdrawing more than account balance" do
+      it "alerts you to overdraft fee" do
+        account.deposit(10)
+        expect{account.withdraw(50)}.to output("Insufficient funds - you have been charged a 10% overdraft fee\n").to_stdout
+      end
+
+      it "applies overdraft fee", :od do
+        account.deposit(10)
+        account.withdraw(20)
+        expect(account.balance).to eq(-11)
+      end
     end
   end
-
 end

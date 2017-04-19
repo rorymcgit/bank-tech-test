@@ -30,5 +30,4 @@ describe "Integration" do
       end
     end
   end
-
 end
