@@ -4,7 +4,11 @@ class Statement
     print_header
     log.history.each do |arr|
       arr.each do |item|
-        print item, "\t\t"
+        if item.class == Time
+          print item.strftime("%c"), "\t"
+        else
+          print item, "\t\t"
+        end
       end
       print "\n"
     end
@@ -12,7 +16,7 @@ class Statement
 
   private
   def print_header
-    puts "Date\t\t\t\t\t Amount\t\t Balance\n"
+    puts "Date\t\t\t\t Amount\t\t Balance\n"
   end
 
 end

@@ -18,7 +18,7 @@ describe Statement do
   end
 
   it "prints a dummy statement" do
-    expect{statement.view(log)}.to output("Date\t\t\t\t\t Amount\t\t Balance\n#{@date}\t\t50\t\t50\t\t\n").to_stdout
+    expect{statement.view(log)}.to output("Date\t\t\t\t Amount\t\t Balance\n#{@date.strftime('%c')}\t50\t\t50\t\t\n").to_stdout
   end
 
 
