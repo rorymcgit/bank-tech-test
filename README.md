@@ -2,6 +2,7 @@
 
 I decided to solve this problem in Ruby, as the solution requires a back-end CLI interface.
 
+#### Usage:
 ```
 $ irb
 2.4.0 :001 > require './lib/account'
@@ -15,10 +16,10 @@ Insufficient funds - you have been charged a 10% overdraft fee
 2.4.0 :006 > account.balance
  => -22
 2.4.0 :007 > account.view_statement
-Date				              Amount		 Balance
-Wed Apr 19 14:03:02 2017	50		     50
-Wed Apr 19 14:03:12 2017	-40		     10
-Wed Apr 19 14:03:30 2017	-30		     -22
+Date				 Amount		 Balance
+Wed Apr 19 14:03:02 2017	50		50
+Wed Apr 19 14:03:12 2017	-40		10
+Wed Apr 19 14:03:30 2017	-30		-22
 ```
 
 ### User Stories
